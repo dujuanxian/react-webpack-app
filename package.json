@@ -9,11 +9,13 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "flow-bin": "^0.40.0",
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.2",
     "react-scripts": "0.9.3"
   },
   "scripts": {
+    "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
